@@ -1,4 +1,4 @@
-# PTSD Severity Prediction in War Veterans 🧠💻
+# CombatCare: Prediction Of PTSD Severity in War Veterans 
 
 This project predicts the **severity of Post-Traumatic Stress Disorder (PTSD)** in war veterans using **machine learning algorithms**. By analyzing diverse data sources—including medical records, psychological assessments, wearable device data, and self-reported symptoms—the model enables early detection of high-risk individuals, supporting timely and personalized interventions.
 
