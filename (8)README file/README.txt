@@ -2,7 +2,7 @@ PTSD Severity Prediction in War Veterans 🧠💻
 
 This project predicts the severity of Post-Traumatic Stress Disorder (PTSD) in war veterans using machine learning algorithms. By analyzing diverse data sources—including medical records, psychological assessments, wearable device data, and self-reported symptoms—the model enables early detection of high-risk individuals, supporting timely and personalized interventions.
 
-📝 #Overview
+📝 ## *Overview*
 
 Veterans are particularly vulnerable to PTSD, which can lead to severe psychological, social, and physical health issues. Traditional diagnostic methods rely on self-reporting and clinical evaluations, which are often limited by subjectivity, inconsistency, and delayed detection.
 
