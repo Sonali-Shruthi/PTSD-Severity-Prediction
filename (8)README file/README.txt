@@ -1,4 +1,5 @@
-PTSD Severity Prediction Project
+Prediction Of PTSD Severity in War Veterans:
+
 Overview
 This project predicts the PTSD severity of veterans using a Random Forest Regressor model. The dataset contains various psychological and demographic features such as depression, anxiety, trauma history, and other outcomes. The model is trained on a normalized dataset to predict PTSD severity. The project utilizes Streamlit for the front end and Python for the model and backend computations.
 
@@ -22,10 +23,11 @@ Pydotplus
 You can install these dependencies using pip:
 pip install streamlit pandas numpy scikit-learn joblib graphviz pydotplus
 
-Setup Instructions
+*Setup Instructions*
 1. Frontend (Streamlit)
-Streamlit will handle the user interface, where users can upload a CSV file for prediction and see the results. To run the frontend:
+Streamlit will handle the user interface, where users can upload a CSV file for prediction and see the results. 
 
+To run the frontend:
 Save the code provided in the app.py file.
 Run the Streamlit application using the following command:
 streamlit run app.py
@@ -60,13 +62,14 @@ R² Score: Measures how well the model fits the data.
 Accuracy and Precision: Metrics are calculated by converting the continuous predictions into binary values based on a threshold.
 Additionally, the decision trees in the random forest are visualized to understand how individual trees contribute to the predictions.
 
-Example Dataset
-Your dataset should have the following columns (but exclude the PTSD Severity column for prediction):
+Example Dataset:
 
+The dataset has the following columns (excluding the PTSD Severity column for prediction):
 Depression
 Anxiety
 Trauma History
-Other psychological and demographic features
+Other psychological and demographic features , etc..
+
 Troubleshooting
 Ensure that the Graphviz installation path is correctly set if you are using tree visualizations.
 If you face any issues with libraries, ensure all dependencies are installed properly using pip.
