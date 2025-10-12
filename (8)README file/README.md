@@ -72,11 +72,11 @@ This rich dataset enables precise prediction of PTSD severity.
 
 ## **Algorithms Used**
 
-Decision Tree & Random Forest: Ensemble-based tree models for robust predictions.
-Boosting Algorithms: CatBoost, XGBoost, Gradient Boosting, AdaBoost.
-Classical ML Models: SVM, KNN, Logistic Regression, Naive Bayes, LDA, QDA.
-Neural Networks: ANN for capturing complex, non-linear patterns.
-Optimization: SGD for scalable training on large datasets.
+-Decision Tree & Random Forest: Ensemble-based tree models for robust predictions.
+-Boosting Algorithms: CatBoost, XGBoost, Gradient Boosting, AdaBoost.
+-Classical ML Models: SVM, KNN, Logistic Regression, Naive Bayes, LDA, QDA.
+-Neural Networks: ANN for capturing complex, non-linear patterns.
+-Optimization: SGD for scalable training on large datasets.
 
 Top-performing models: Random Forest & CatBoost (98% accuracy), XGBoost & Gradient Boosting (97% accuracy).
 
@@ -84,10 +84,10 @@ Top-performing models: Random Forest & CatBoost (98% accuracy), XGBoost & Gradie
 
 Evaluation metrics include:
 
-Accuracy: Correct predictions / Total predictions
-Precision: True Positives / (True Positives + False Positives)
-Recall: True Positives / (True Positives + False Negatives)
-F1-Score: Harmonic mean of Precision & Recall
+-Accuracy: Correct predictions / Total predictions
+-Precision: True Positives / (True Positives + False Positives)
+-Recall: True Positives / (True Positives + False Negatives)
+-F1-Score: Harmonic mean of Precision & Recall
 
 Confusion matrices were computed for all models to analyze misclassifications.
 Performance comparison identifies the most reliable models for deployment.
@@ -118,7 +118,7 @@ Run the Streamlit application using the following command:
 streamlit run app.py
 The application will open in your default web browser, where you can interact with the project.
 
-**Troubleshooting**
+**Troubleshooting**:
 Ensure that the Graphviz installation path is correctly set if you are using tree visualizations.
 If you face any issues with libraries, ensure all dependencies are installed properly using pip.
 
