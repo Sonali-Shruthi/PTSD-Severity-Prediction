@@ -1,84 +1,99 @@
-PTSD Severity Prediction in War Veterans 🧠💻
+# PTSD Severity Prediction in War Veterans 🧠💻
 
-This project predicts the severity of Post-Traumatic Stress Disorder (PTSD) in war veterans using machine learning algorithms. By analyzing diverse data sources—including medical records, psychological assessments, wearable device data, and self-reported symptoms—the model enables early detection of high-risk individuals, supporting timely and personalized interventions.
+This project predicts the **severity of Post-Traumatic Stress Disorder (PTSD)** in war veterans using **machine learning algorithms**. By analyzing diverse data sources—including medical records, psychological assessments, wearable device data, and self-reported symptoms—the model enables early detection of high-risk individuals, supporting timely and personalized interventions.
 
-📝 ## *Overview*
+## **Overview**
 
-Veterans are particularly vulnerable to PTSD, which can lead to severe psychological, social, and physical health issues. Traditional diagnostic methods rely on self-reporting and clinical evaluations, which are often limited by subjectivity, inconsistency, and delayed detection.
+Veterans are particularly vulnerable to PTSD, which can lead to severe psychological, social, and physical health issues. Traditional diagnostic methods rely on self-reporting and clinical evaluations, which are often limited by subjectivity, inconsistency, and delayed detection.  
 
-This project applies machine learning to:
+This project applies machine learning to:  
+- Predict PTSD severity  
+- Identify critical patterns and risk factors  
+- Enable early, personalized interventions  
 
-Predict PTSD severity
+The approach integrates **Random Forest, CatBoost, XGBoost, Gradient Boosting**, and other algorithms to model complex interactions between psychological, demographic, and behavioral variables.
 
-Identify critical patterns and risk factors
+## **Features**
 
-Enable early, personalized interventions
+- **Input:** Medical records, psychological assessments, wearable data, and self-reported symptoms  
+- **Output:** PTSD severity (categorical values)  
+- **Algorithms Tested:**  
+  - Random Forest  
+  - CatBoost  
+  - XGBoost  
+  - Gradient Boosting  
+  - AdaBoost  
+  - SVM  
+  - KNN  
+  - ANN  
+  - Naive Bayes  
+  - Logistic Regression  
+  - SGD  
+  - Extra Trees  
+  - LDA & QDA  
+- **Evaluation Metrics:** Accuracy, Precision, Recall, F1-Score, Confusion Matrix  
 
-The approach integrates Random Forest, CatBoost, XGBoost, Gradient Boosting, and other algorithms to model complex interactions between psychological, demographic, and behavioral variables.
+## **Dataset**
+
+The project uses a **US Veteran dataset** with comprehensive clinical and diagnostic features, including:  
+
+- Study Class & Treatment Focus  
+- Clinical Setting & Study Design  
+- Symptom Clusters (Intrusion, Avoidance, Hyperarousal)  
+- Comorbid conditions: Depression, Anxiety, Sleep, Anger, Substance Use  
+- Quality of Life & Functioning Outcomes  
+- Trauma Type & Details  
+- Suicide/self-harm assessment  
+
+This rich dataset enables precise prediction of PTSD severity.  
+
+---
+
+## **Data Preprocessing**
+
+- **Categorical to Numerical Conversion:**  
+  - Diagnostic Measures, Study Class, Treatment Focus, and Clinical Settings encoded using custom ranking systems.  
+  - PTSD Severity encoded into High (0), Medium (1), Low (2).  
+
+- **Normalization:**  
+  Min-Max scaling applied to numeric features to bring values between 0 and 1:  
+
+## **Feature Selection:**
+
+ - Correlation analysis and statistical tests were performed to identify the most predictive       features.
+ - Features with low correlation to PTSD severity or high multicollinearity were removed.
+ - Key features retained include psychological metrics (depression, anxiety, trauma history),      demographic variables, and clinical assessment scores.
+
+## **Feature Engineering**
+ 
+- KMeans Clustering: Categorized PTSD severity into High, Medium, and Low. Helps identify hidden patterns and refine target labels for prediction.
+- Optimized labeling provides a richer and more meaningful set of target variables for machine learning models.
+- Normalized and encoded features ensure uniform scaling for model input.
+
+## **Algorithms Used**
+
+Decision Tree & Random Forest: Ensemble-based tree models for robust predictions.
+Boosting Algorithms: CatBoost, XGBoost, Gradient Boosting, AdaBoost.
+Classical ML Models: SVM, KNN, Logistic Regression, Naive Bayes, LDA, QDA.
+Neural Networks: ANN for capturing complex, non-linear patterns.
+Optimization: SGD for scalable training on large datasets.
+
+Top-performing models: Random Forest & CatBoost (98% accuracy), XGBoost & Gradient Boosting (97% accuracy).
+
+## **Model Evaluation**
+
+Evaluation metrics include:
+
+Accuracy: Correct predictions / Total predictions
+Precision: True Positives / (True Positives + False Positives)
+Recall: True Positives / (True Positives + False Negatives)
+F1-Score: Harmonic mean of Precision & Recall
+
+Confusion matrices were computed for all models to analyze misclassifications.
+Performance comparison identifies the most reliable models for deployment.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Prediction Of PTSD Severity in War Veterans:
-
-Overview
-This project predicts the PTSD severity of veterans using a Random Forest Regressor model. The dataset contains various psychological and demographic features such as depression, anxiety, trauma history, and other outcomes. The model is trained on a normalized dataset to predict PTSD severity. The project utilizes Streamlit for the front end and Python for the model and backend computations.
-
-Features
-Input: Various psychological and demographic features of veterans.
-Output: PTSD Severity (Continuous Value).
-Model: Random Forest Regressor.
-Evaluation Metrics: Mean Absolute Error (MAE), R² Score, Accuracy, and Precision.
-Prerequisites
+## Prerequisites
 To run this project locally, ensure you have the following installed:
 
 Python 3.7+
@@ -93,7 +108,7 @@ Pydotplus
 You can install these dependencies using pip:
 pip install streamlit pandas numpy scikit-learn joblib graphviz pydotplus
 
-*Setup Instructions*
+**Setup Instructions**
 1. Frontend (Streamlit)
 Streamlit will handle the user interface, where users can upload a CSV file for prediction and see the results. 
 
@@ -102,44 +117,8 @@ Save the code provided in the app.py file.
 Run the Streamlit application using the following command:
 streamlit run app.py
 The application will open in your default web browser, where you can interact with the project.
-2. Python Model (Random Forest Regressor)
-The machine learning model, trained on a dataset of veterans, is used to predict the PTSD severity based on various features. The trained model is saved as a .pkl file (e.g., random_forest_model.pkl) and loaded when the user uploads a dataset.
 
-Model Workflow:
-The model predicts the PTSD severity using the Random Forest Regressor.
-Various metrics like Accuracy, Precision, Mean Absolute Error (MAE), and R² score are computed and displayed.
-The first few decision trees in the random forest are visualized using Graphviz.
-3. How to Use the Application
-Upload your dataset:
-
-You can upload a CSV file that contains the necessary features (excluding the PTSD Severity column).
-The model will automatically predict the severity and show evaluation metrics.
-Metrics Displayed:
-
-Mean Absolute Error
-R² Score
-Accuracy
-Precision
-Decision Tree Visualization:
-
-The first three decision trees in the trained Random Forest are displayed as PNG images.
-These trees help to understand how the model makes predictions.
-4. Model Evaluation and Visualizations
-The model’s predictions are evaluated using the following metrics:
-
-Mean Absolute Error (MAE): Measures the average of the absolute errors between predicted and actual values.
-R² Score: Measures how well the model fits the data.
-Accuracy and Precision: Metrics are calculated by converting the continuous predictions into binary values based on a threshold.
-Additionally, the decision trees in the random forest are visualized to understand how individual trees contribute to the predictions.
-
-Example Dataset:
-
-The dataset has the following columns (excluding the PTSD Severity column for prediction):
-Depression
-Anxiety
-Trauma History
-Other psychological and demographic features , etc..
-
-Troubleshooting
+**Troubleshooting**
 Ensure that the Graphviz installation path is correctly set if you are using tree visualizations.
 If you face any issues with libraries, ensure all dependencies are installed properly using pip.
+
